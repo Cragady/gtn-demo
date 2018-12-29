@@ -11,3 +11,7 @@ Just work on styling to show
 * Rest should be news papery with layout
 * Important pages: Home, about, contact
 * Search tags implementation
+
+# Quick note 
+
+If react auto-adds a .git file for you and you don't notice, you will be wondering why nothing is being pushed. Delete any .git files react makes for you. Your life will thank you for the added quality.
