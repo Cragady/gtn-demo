@@ -1,0 +1,80 @@
+/* Mach1 Stylz 1111111*/
+.Mach1{
+    /* background: rgb(179, 185, 192); */
+    background: url('/images/back.png'), radial-gradient(#fff, #fff, rgba(252, 232, 249, 0.26), rgba(0, 0, 255, 0.082));
+    /* background-image: url('/images/back.png'); */
+    min-width: 100%;
+    padding: 0;
+}
+
+.m1-head-img{
+    height: 150px;
+}
+
+.m1-img-cont{
+    text-align: left;
+    background-image: linear-gradient(to right, #fff, #fff, rgb(252, 232, 249), rgba(0, 0, 255, 0.301));
+}
+
+.m1-navs{
+    background-image: linear-gradient(to right, #fff, #fff, rgb(252, 232, 249), rgba(0, 0, 255, 0.301));
+}
+
+.m1-gtn-ico{
+    max-height: 50px;
+    max-width: auto;
+    margin-left: 0;
+}
+
+.m1-ni-cust{
+    margin: 3px 6px 3px 6px;
+    padding: 0px;
+}
+
+.m1-bb-container{
+    background: rgba(128, 128, 128, 0.589);
+    max-height: 300px;
+    position: relative;
+}
+
+.m1-body-banner{
+    background: url('http://hdwpro.com/wp-content/uploads/2017/01/3D-Cool-Image.jpg') no-repeat;
+    background-size: cover;
+}
+
+.m1-bb-content{
+    color: #fff;
+    background: rgba(0, 0, 0, 0.541);
+    min-height: 250px;
+}
+
+.m1-bb-cover{
+    background: rgba(183, 221, 226, 0.582);
+}
+
+.m1-story-mins{
+    background: rgb(233, 253, 253);
+}
+
+@media (max-width: 768px) {
+    .col-md-0{
+        display: none;
+    }
+}
+
+@media (min-width: 768px){
+    .m1-pic-nav{
+        display: none;
+    }
+}
+
+/* Mach2 Stylz 2222222*/
+.Mach2{
+    background: red;
+}
+
+
+/* Mach1 Stylz 3333333*/
+.Mach3{
+    background: black;
+}
