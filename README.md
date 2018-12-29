@@ -15,3 +15,5 @@ Just work on styling to show
 # Quick note 
 
 If react auto-adds a .git file for you and you don't notice, you will be wondering why nothing is being pushed. Delete any .git files react makes for you. Your life will thank you for the added quality.
+
+Be sure to delete it before you create another .git file
