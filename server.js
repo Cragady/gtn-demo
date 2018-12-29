@@ -2,7 +2,7 @@ const express = require('express'),
     bodyParser = require('body-parser'),
     app = express(),
     path = require('path'),
-    PORT = procss.env.PORT || 3001;
+    PORT = process.env.PORT || 3001;
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
