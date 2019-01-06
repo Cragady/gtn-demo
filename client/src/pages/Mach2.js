@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import {Story} from '../components/Story';
 import './pages.css'
 
+
 const stories = [`This just in! It's been reported that you've just read this headline!`,
     `Another story is displayed on this news site!!`,
     `La de da de daaaa~~! OH SHIT THERE'S SOMEONE HERE?!`,
@@ -27,60 +28,129 @@ const cat1=[];
 const cat2=[];
 const cat3=[];
 
-function shufArr(arr){
-    let currInd = arr.length, tempVal, randInd;
-
-    while (0 !== currInd){
-        randInd = Math.floor(Math.random() * currInd);
-        currInd -= 1;
-
-        tempVal = arr[currInd];
-        arr[currInd] = arr[randInd];
-        arr[randInd] = tempVal;
-    };
-    return arr;
-}
-
-function arrSplit(arr){
-    let c1 = true;
-    let c2 = false;
-    let c3 = false;
-    for(let i = 0; i < arr.length; i++){
-        switch(true){
-            case c1:
-                cat1.push(arr[i]);
-                c1 = false;
-                c2 = true;
-                break;
-            case c2:
-                cat2.push(arr[i]);
-                c2 = false;
-                c3 = true;
-                break;
-            case c3:
-                cat3.push(arr[i]);
-                c3 = false;
-                c1 = true;
-                break;
-        default:
-            return;
-        }
-    }
-}
-
 export class Mach2 extends Component {
-    render(){
+    constructor(props){
+        super(props);
+        this.state = {
+            width: Number,
+            layout: ''
+        };
+    };
+
+    updateDimensions = () =>{
+        this.setState({
+            width: window.innerWidth,
+            layout: this.midUpdate()
+        });
+    }
+
+    componentWillMount = () =>{
+        this.updateDimensions();
+    }
+
+    componentDidMount = () =>{
+        window.addEventListener('resize', this.updateDimensions);
+    }
+
+    componentWillUnmount = () =>{
+        window.removeEventListener('resize', this.updateDimensions);
+    }
+
+    midUpdate = () =>{
+        let smolWin;
+        let medWin = [];
+        let catCat = [];
+
+        
         stories.map(story =>{
-            return catStories.push({story: story, img: './images/gooTn-alt.png'});
+            return catCat.push({story: story, img: './images/gooTn-alt.png'});
         });
         picLessStories.map(story =>{
-            return catStories.push({story: story, img: null});
+            return catCat.push({story: story, img: null});
         });
-        shufArr(catStories);
-        arrSplit(catStories);
-        const wWidth = window.innerWidth;
+        this.shufArr(catCat);
+        this.arrSplit(catCat);
+        
+        window.innerWidth > 594 ? smolWin = 
+            <div key='0-mins' className='row container text-center'>
+                <section className='col-md-8 col-sm-8'>
+                    <div className='row justify-content-center'>
+                    {catCat.map(story =>{
+                        let divPass;
+                        if(story.img){
+                            divPass = <Story key={story.story + 'mins3'} className='col-md-4 col-lg-3 col-5 m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
+                        }
+                        return (divPass);
+                    })}
+
+                    </div>
+                </section>
+                <section className='col-md-4 col-sm-4'>
+                    {catCat.map(story =>{
+                        let divPass;
+                        if(!story.img){
+                            divPass = <Story key={story.story + 'mins3'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
+                        }
+                        return (divPass);
+                    })}
+                </section>
+            </div>
+         : smolWin = <section key='0-mins' className='col-12'>
+                {catCat.map(story =>{
+                    return(
+                        <Story key={story.story + 'mins2'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
+                    )
+                })}
+            </section>
+        medWin.push(smolWin);
+        return smolWin;
+    }
+
+    shufArr = (arr) =>{
+        let currInd = arr.length, tempVal, randInd;
+
+        while (0 !== currInd){
+            randInd = Math.floor(Math.random() * currInd);
+            currInd -= 1;
+
+            tempVal = arr[currInd];
+            arr[currInd] = arr[randInd];
+            arr[randInd] = tempVal;
+        };
+        return arr;
+    }
+
+    arrSplit = (arr) =>{
+        let c1 = true;
+        let c2 = false;
+        let c3 = false;
+        for(let i = 0; i < arr.length; i++){
+            switch(true){
+                case c1:
+                    cat1.push(arr[i]);
+                    c1 = false;
+                    c2 = true;
+                    break;
+                case c2:
+                    cat2.push(arr[i]);
+                    c2 = false;
+                    c3 = true;
+                    break;
+                case c3:
+                    cat3.push(arr[i]);
+                    c3 = false;
+                    c1 = true;
+                    break;
+            default:
+                return;
+            }
+        }
+    }
+
+// export class Mach2 extends Component {
+    render(){
         return(
-            <div className='Mach1'>
+            <div className='Mach1' id='Mach1'>
 
                 <header className='m1-header-banner col-md-0'>
                     <div className='m1-img-cont'>
@@ -156,15 +226,15 @@ export class Mach2 extends Component {
                                     );
                                 })}
                             </section> */}
-                            {
-                                wWidth > 414 ? (
+                            {/* {
+                                this.state.width > 414 ? (
                             <div className='row container text-center'>
                             <section className='col-md-8 col-sm-8'>
                                 <div className='row justify-content-center'>
                                 {catStories.map(story =>{
                                     let divPass;
                                     if(story.img){
-                                        divPass = <Story key={story.story + 'mins'} className='col-md-4 col-lg-3 col-5 m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
+                                        divPass = <Story key={story.story + 'mins3'} className='col-md-4 col-lg-3 col-5 m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
                                     }
                                     return (divPass);
                                 })}
@@ -175,7 +245,7 @@ export class Mach2 extends Component {
                                 {catStories.map(story =>{
                                     let divPass;
                                     if(!story.img){
-                                        divPass = <Story key={story.story + 'mins'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
+                                        divPass = <Story key={story.story + 'mins3'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
                                     }
                                     return (divPass);
                                 })}
@@ -185,11 +255,13 @@ export class Mach2 extends Component {
                             <section className='col-12'>
                                 {catStories.map(story =>{
                                     return(
-                                        <Story key={story.story + 'mins'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
+                                        <Story key={story.story + 'mins2'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
                                     )
                                 })}
                             </section>
-                            )}
+                            )} */}
+                            {/* {medWin !== undefined ? medWin : smolWin} */}
+                            {this.state.layout}
                         </div>
                     </section>
 
