@@ -68,16 +68,17 @@ function arrSplit(arr){
     }
 }
 
+stories.map(story =>{
+    return catStories.push({story: story, img: './images/gooTn-alt.png'});
+});
+picLessStories.map(story =>{
+    return catStories.push({story: story, img: null});
+});
+shufArr(catStories);
+arrSplit(catStories);
+
 export class Mach1 extends Component {
     render(){
-        stories.map(story =>{
-            return catStories.push({story: story, img: './images/gooTn-alt.png'});
-        });
-        picLessStories.map(story =>{
-            return catStories.push({story: story, img: null});
-        });
-        shufArr(catStories);
-        arrSplit(catStories);
         return(
             <div className='Mach1'>
 
