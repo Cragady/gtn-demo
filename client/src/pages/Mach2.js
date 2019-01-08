@@ -78,7 +78,7 @@ export class Mach2 extends Component {
                     {catCat.map(story =>{
                         let divPass;
                         if(story.img){
-                            divPass = <Story key={story.story + 'mins3'} className='col-md-4 col-lg-3 col-5 m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
+                            divPass = <Story key={story.story + 'mins3'} className='col-md-12 col-lg-4 col-12 m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
                         }
                         return (divPass);
                     })}

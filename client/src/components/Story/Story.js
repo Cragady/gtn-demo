@@ -1,4 +1,5 @@
 import React from 'react';
+import './story.css';
 
 export const Story = props => {
     return(
@@ -6,7 +7,7 @@ export const Story = props => {
             <div className={props.className}>
                 {props.imgpass ? (
                     <div>
-                        <img className='card-header img-fluid p-0' alt='' src={props.imgpass} />
+                        <img className='story-img card-header img-fluid p-0' alt='' src={props.imgpass} />
                         <div className='m1-title'>{props.story}</div>
                     </div>
 
