@@ -89,7 +89,7 @@ export class Mach2 extends Component {
                     {catCat.map(story =>{
                         let divPass;
                         if(!story.img){
-                            divPass = <Story key={story.story + 'mins3'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
+                            divPass = <Story key={story.story + 'mins3'} className='m1-story-mins py-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
                         }
                         return (divPass);
                     })}
@@ -98,7 +98,7 @@ export class Mach2 extends Component {
          : smolWin = <section key='0-mins' className='col-12'>
                 {catCat.map(story =>{
                     return(
-                        <Story key={story.story + 'mins2'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
+                        <Story key={story.story + 'mins2'} className='m1-story-mins py-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
                     )
                 })}
             </section>

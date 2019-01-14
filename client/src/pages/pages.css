@@ -53,8 +53,7 @@
 }
 
 .m1-story-mins{
-    background: rgba(2, 2, 2, 0.137);
-    font-size: 1em;
+    border-bottom: solid 2px grey;
 }
 
 @media (max-width: 768px) {

@@ -12,7 +12,7 @@ export const Story = props => {
                     </div>
 
                 ) : ( 
-                    <div className='m1-title'>{props.story}</div>
+                    <div className='m1-title2'>{props.story}</div>
                 )}
             </div>
         // </section>

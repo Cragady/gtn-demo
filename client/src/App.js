@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Nav } from './components/Nav';
-import { Mach1, Mach2, Mach3 } from './pages';
+import {  Mach2, Mach3 } from './pages';
 import './App.css';
 
 class App extends Component {
@@ -14,7 +14,7 @@ class App extends Component {
           <Switch>
             <Route path="/mach3" component={Mach3} />
             <Route path="/mach2" component={Mach2} />
-            <Route path="/" component={Mach1} />
+            <Route path="/" component={Mach2} />
           </Switch>
         </div>
       </Router>
