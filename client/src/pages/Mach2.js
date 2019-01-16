@@ -71,9 +71,9 @@ export class Mach2 extends Component {
         this.shufArr(catCat);
         this.arrSplit(catCat);
         
-        window.innerWidth > 594 ? smolWin = 
+        window.innerWidth > 768 ? smolWin = 
             <div key='0-mins' className='row container text-center'>
-                <section className='col-md-8 col-sm-8'>
+                <section className='col-8'>
                     <div className='row justify-content-center'>
                     {catCat.map(story =>{
                         let divPass;
@@ -85,7 +85,7 @@ export class Mach2 extends Component {
 
                     </div>
                 </section>
-                <section className='col-md-4 col-sm-4'>
+                <section className='col-4'>
                     {catCat.map(story =>{
                         let divPass;
                         if(!story.img){
@@ -192,7 +192,7 @@ export class Mach2 extends Component {
                         </div>
                     </section>
 
-                    <section className='mx-auto m1-thrown-div-cont col-lg-10'>
+                    <section className='mx-auto m1-thrown-div-cont col-lg-10 col-12'>
                         <div className='m1-new-cont row justify-content-center'>
                             {/* {stories.map(story =>{
                                 return(
