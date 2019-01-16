@@ -1,3 +1,5 @@
+Link to test site: [Good Time News](https://pacific-ocean-43015.herokuapp.com/)
+
 # Right Now
 
 Just work on styling to show
