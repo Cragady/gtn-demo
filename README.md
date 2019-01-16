@@ -14,6 +14,8 @@ Just work on styling to show
 * If a new logo is thinkable, do it
 * Main Headline is page-wide at top
 * Maybe add a description for link only stories for larger sizes and perhaps medium sizes too. This will cut back on the linked only stories not taking up as much space as the pic'd stories
+* Clean up navbar.
+* Navbar will have home, about, contact(?), and search links.
 
 #### Visual Thoughts
 
@@ -25,7 +27,10 @@ Just work on styling to show
 * Ad below where stories end? (above button to click for more stories)
 * Title for pic stories over the pic?
 * Pics for every story? Just smaller pics for the non leading stories and larger pics for the previous head banner stories?
-* Needs more "happening" on landing page. A little more flash, but in a minute amount
+* Needs more "happening" on landing page. A little more flash, but in a minute amount. 
+* Background needed?
+* Ads at bottom of article pages instead of throughout article
+* Clear end of article (avoids tricking user to keep on scrolling for story that isn't there)
 
 
 ## Database implementations 
@@ -41,12 +46,14 @@ Just work on styling to show
 * Load more linked only stories than stories with picture (maybe)
 * Have 10 at a time, take position of last article(s) and use that as a starting point to pull from database then load another 5, 10, 15, however more artiles at a time. A button will be below the last article to initiate this.
 * On searching: make a separate landing page fore searches where the results are appended to the page. On a new search, this will empty the div that houses the results. The results will be one column only, with smaller sizes for the headers and same sizes for the smaller stories. Two input fields, one for title/description inclusions, the other for the date. If the date doesn't match, give notice, but throw out articles related to search. Searching may have strict functionality. A date or title/description portion must be included to initiate search.
+* Secret login for site (editing, adding, removing)
 
 
 # Near Future
 
 * Rough implementation of Home page almost done, make a couple of new pages for about and contact. (Could also make a footer for the contact portion)
 * Throw everything into components (within reason). This will make the overall code layout cleaner and easier to edit. Migrate appropriate css to the relevant component file path when doing so.
+* Make it more accessible. Throw in "roles=''" in appropriate places. Avoid having no alt's on images(alt="" is better than no alt). Don't skip from h1 to h3, use appropriate headers and resize on specific headers if needed. Look up how to make site more accessible.
 
 <!-- # Quick Visual Reference
 * One possibility:
