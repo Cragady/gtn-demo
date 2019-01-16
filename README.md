@@ -13,12 +13,20 @@ Just work on styling to show
 * Tile pieces are a bit too close together
 * If a new logo is thinkable, do it
 * Main Headline is page-wide at top
+* Maybe add a description for link only stories for larger sizes and perhaps medium sizes too. This will cut back on the linked only stories not taking up as much space as the pic'd stories
 
 #### Visual Thoughts
 
 * Below main headline, two columns holding the features
 * Maybe have the two columns have two sub-columns that only expand on screen-wide viewport
+* Collapsible and expandable descriptions for smaller sizes
+* Maybe only one pic story instead of two on same row for large size
 * (two column page): Old main headlines on left, these have the picture, headline, small preview. The right side is just headlines of non-features
+* Ad below where stories end? (above button to click for more stories)
+* Title for pic stories over the pic?
+* Pics for every story? Just smaller pics for the non leading stories and larger pics for the previous head banner stories?
+* Needs more "happening" on landing page. A little more flash, but in a minute amount
+
 
 ## Database implementations 
 
@@ -27,13 +35,23 @@ Just work on styling to show
 * Split the array/object being parsed. eg pictured store 1-3 then text-link only stories 3-8; pictured > textlink > pictured > text-link etc. . .
 * ^^ scripting to control layout, e.g. throwing them in a few different variables then mapped to the page in the respective variable location
 * Maybe give the object a property that will be assigned on a load. After load, the property is set and won't be changed. This way, it won't change the position because of how items are being fed to the page for display.
+* On smaller sizes combine the split arrays and then order by date
 * A type-tag should accompany the article object, if it's a header or old header, only old headers will have pictures (this may change, but for now, this is the plan)
 * Easy sharing to FaceBook and Twitter is a must
+* Load more linked only stories than stories with picture (maybe)
+* Have 10 at a time, take position of last article(s) and use that as a starting point to pull from database then load another 5, 10, 15, however more artiles at a time. A button will be below the last article to initiate this.
+* On searching: make a separate landing page fore searches where the results are appended to the page. On a new search, this will empty the div that houses the results. The results will be one column only, with smaller sizes for the headers and same sizes for the smaller stories. Two input fields, one for title/description inclusions, the other for the date. If the date doesn't match, give notice, but throw out articles related to search. Searching may have strict functionality. A date or title/description portion must be included to initiate search.
 
-# Quick Visual Reference
-* One possibility: 
 
-<img src="one-vis-reference.jpg" alt="ref">
+# Near Future
+
+* Rough implementation of Home page almost done, make a couple of new pages for about and contact. (Could also make a footer for the contact portion)
+* Throw everything into components (within reason). This will make the overall code layout cleaner and easier to edit. Migrate appropriate css to the relevant component file path when doing so.
+
+<!-- # Quick Visual Reference
+* One possibility:
+
+<img src="one-vis-reference.jpg" alt="ref"> -->
 
 # Quick note 
 
