@@ -23,11 +23,6 @@ const picLessStories = [`Articles lose their picture holding ability!`,
     `bleep`,
     `bloop`];
 
-const catStories = [];
-const cat1=[];
-const cat2=[];
-const cat3=[];
-
 export class Mach2 extends Component {
     constructor(props){
         super(props);
@@ -58,7 +53,6 @@ export class Mach2 extends Component {
 
     midUpdate = () =>{
         let smolWin;
-        let medWin = [];
         let catCat = [];
 
         
@@ -69,10 +63,9 @@ export class Mach2 extends Component {
             return catCat.push({story: story, img: null});
         });
         this.shufArr(catCat);
-        this.arrSplit(catCat);
         
-        window.innerWidth > 768 ? smolWin = 
-            <div key='0-mins' className='row container text-center'>
+        window.innerWidth > 594 ? smolWin = 
+            <div key='0-mins' className='row container-fluid text-center'>
                 <section className='col-8'>
                     <div className='row justify-content-center'>
                     {catCat.map(story =>{
@@ -102,7 +95,6 @@ export class Mach2 extends Component {
                     )
                 })}
             </section>
-        medWin.push(smolWin);
         return smolWin;
     }
 
@@ -120,34 +112,6 @@ export class Mach2 extends Component {
         return arr;
     }
 
-    arrSplit = (arr) =>{
-        let c1 = true;
-        let c2 = false;
-        let c3 = false;
-        for(let i = 0; i < arr.length; i++){
-            switch(true){
-                case c1:
-                    cat1.push(arr[i]);
-                    c1 = false;
-                    c2 = true;
-                    break;
-                case c2:
-                    cat2.push(arr[i]);
-                    c2 = false;
-                    c3 = true;
-                    break;
-                case c3:
-                    cat3.push(arr[i]);
-                    c3 = false;
-                    c1 = true;
-                    break;
-            default:
-                return;
-            }
-        }
-    }
-
-// export class Mach2 extends Component {
     render(){
         return(
             <div className='Mach1' id='Mach1'>
@@ -194,73 +158,6 @@ export class Mach2 extends Component {
 
                     <section className='mx-auto m1-thrown-div-cont col-lg-10 col-12'>
                         <div className='m1-new-cont row justify-content-center'>
-                            {/* {stories.map(story =>{
-                                return(
-                                    // <section key={story + 'mins'} className='m1-story-mins col-md col-sm-3 col-12 p-0 my-2 mx-1'>
-                                    <section key={story + 'mins'} className='m1-story-mins col-md-2 col-sm-3 col-12 my-1 mx-2 p-0'>
-                                        <div>
-                                            <img className='card-header img-fluid p-0' alt='' src='./images/gooTn-alt.png' />
-                                            <div className='m1-title'>{story}</div>
-                                        </div>
-                                    </section>
-                                );
-                            })} */}
-                            {/* <section className='col-md-2 col-sm-3 col-12'>
-                                {cat1.map(story =>{
-                                    return(
-                                            <Story key={story.story + 'mins'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>                                    
-                                    );
-                                })}
-                            </section>
-                            <section className='col-md-2 col-sm-3 col-12'>
-                                {cat2.map(story =>{
-                                    return(
-                                            <Story key={story.story + 'mins'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>                                    
-                                    );
-                                })}
-                            </section>
-                            <section className='col-md-2 col-sm-3 col-12'>
-                                {cat3.map(story =>{
-                                    return(
-                                            <Story key={story.story + 'mins'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>                                    
-                                    );
-                                })}
-                            </section> */}
-                            {/* {
-                                this.state.width > 414 ? (
-                            <div className='row container text-center'>
-                            <section className='col-md-8 col-sm-8'>
-                                <div className='row justify-content-center'>
-                                {catStories.map(story =>{
-                                    let divPass;
-                                    if(story.img){
-                                        divPass = <Story key={story.story + 'mins3'} className='col-md-4 col-lg-3 col-5 m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
-                                    }
-                                    return (divPass);
-                                })}
-
-                                </div>
-                            </section>
-                            <section className='col-md-4 col-sm-4'>
-                                {catStories.map(story =>{
-                                    let divPass;
-                                    if(!story.img){
-                                        divPass = <Story key={story.story + 'mins3'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
-                                    }
-                                    return (divPass);
-                                })}
-                            </section>
-                            </div>
-                            ) : (
-                            <section className='col-12'>
-                                {catStories.map(story =>{
-                                    return(
-                                        <Story key={story.story + 'mins2'} className='m1-story-mins my-1 mx-2 p-0' story={story.story} imgpass={story.img}/>
-                                    )
-                                })}
-                            </section>
-                            )} */}
-                            {/* {medWin !== undefined ? medWin : smolWin} */}
                             {this.state.layout}
                         </div>
                     </section>
