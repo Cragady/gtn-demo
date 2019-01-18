@@ -62,6 +62,20 @@ Just work on styling to show
 
 <img src="one-vis-reference.jpg" alt="ref"> -->
 
+# Dependency Notes
+
+* For CodeMirror to work on React, you have to `yarn add codemirror` and `yarn add react-codemirror`
+
+The imports/requirements will be similar to as follows:
+
+```javascript
+import React, { Component } from 'react';
+import CodeMirror from 'react-codemirror';
+import './pages.css';
+require('codemirror/mode/markdown/markdown');
+require('codemirror/lib/codemirror.css');
+```
+
 # Quick note 
 
 If react auto-adds a .git file for you and you don't notice, you will be wondering why nothing is being pushed. Delete any .git files react makes for you. Your life will thank you for the added quality.
