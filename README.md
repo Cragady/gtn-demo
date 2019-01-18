@@ -33,6 +33,7 @@ Just work on styling to show
 * Background needed?
 * Ads at bottom of article pages instead of throughout article
 * Clear end of article (avoids tricking user to keep on scrolling for story that isn't there)
+* Collapsible column for the 'smaller' stories
 
 
 ## Database implementations 
