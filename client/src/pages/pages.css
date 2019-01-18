@@ -56,6 +56,10 @@
     border-bottom: solid 2px grey;
 }
 
+#codemirror-area{
+    background: grey!important;
+}
+
 @media (max-width: 768px) {
     .col-md-0{
         display: none;

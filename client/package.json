@@ -1,12 +1,15 @@
 {
   "name": "client",
   "version": "0.1.0",
-  "private": true, 
+  "private": true,
   "test": false,
   "proxy": "http://localhost:3001/",
   "dependencies": {
+    "codemirror": "^5.42.2",
     "react": "^16.7.0",
+    "react-codemirror": "^1.0.0",
     "react-dom": "^16.7.0",
+    "react-markdown": "^4.0.6",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.1"
   },
